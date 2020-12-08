@@ -107,7 +107,7 @@ void setup() {
 
   delay(1000);                             // Fireselector on Safe and then plug in the accumulator!
   SafeMid = analogRead(PIN_SEL);           // current value will be saved for Safe mode
-  delay(1000);                             // Wait one second, for bouncing reasons...
+  delay(1000);                             // Wait one second, for debouncing reasons...
 
   while  (digitalRead(PIN_TRG) != LOW) {} { // Switch to Semi and pull the Trigger, same method for the other firemodes
     SemiMid = analogRead(PIN_SEL);
